@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+
+
+    <div class="container">
+        <div class="box1">
+            <h1>BMI CALCULATOR</h1>
+        </div>
+        <div class="box2">
+            <div>
+                <label>Height in meters:</label>
+                <input type="text" class="height-input-field">
+            </div>
+
+            <div>
+                <label>weight in kilograms:</label>
+                <input type="text" class="weight-input-field">
+            </div>
+
+        </div>
+
+        <div class="box3">
+            <button class="calculate">Calculate</button>
+        </div>
+
+    </div>
+    <div class="row">
+        <h3 class="result"></h3>
+        <p class="result-statement"></p>
+    </div>
+
+
+    <script>
+        let heightInput = document.querySelector('.height-input-field')
+
+        let weightInput = document.querySelector('.weight-input-field')
+
+        let calculateButton = document.querySelector('.calculate')
+
+        let statement = document.querySelector('.result-statement')
+
+        var result = document.querySelector(".result");
+
+        let _BMI, _weight, _height;
+
+
+        calculateButton.addEventListener('click', function () {
+            _height = heightInput.value;
+            _weight = weightInput.value;
+            if (
+                _height == "" && _weight == ""
+            ) {
+                alert('Please enter your height and weight')
+            } else if (calculateButton.innerHTML === "Reset") {
+                heightInput.value = "";
+                weightInput.value = "";
+                result.innerHTML = "";
+                statement.innerHTML = "";
+                calculateButton.innerHTML = "Calculate";
+            }
+            else {
+                _BMI = Math.floor(_weight / (_height ** 2))
+                result.innerHTML = _BMI
+                if (_BMI < 18.5) {
+                    statement.innerHTML = 'Your BMI falls within the underweight range'
+                    result.style.color = 'orange'
+                } else if ((_BMI > 18.5) && (_BMI <= 24.5)) {
+                    statement.innerHTML = "Your BMI falls within the normal or healthy weight range";
+                    result.style.color = 'green'
+                } else if ((_BMI >= 25) && (_BMI <= 29.9)) {
+                    statement.innerHTML = "Your BMI falls within the overweight range";
+                    result.style.color = 'red'
+                } else {
+                    statement.innerHTML = "Your BMI falls within the obese range";
+                    result.style.color = 'yellow'
+                }
+                calculateButton.innerHTML = 'Reset'
+
+
+
+
+            }
+
+
+        })
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

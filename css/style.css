@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  align-items: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  overflow: hidden;
+}
+
+.container {
+  width: 500px;
+  height: 450px;
+  margin-bottom: 50px;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  box-shadow: -11px 11px 22px #bebebe, 11px -11px 22px #ffffff;
+}
+.container .box1 {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.container .box2 {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.container .box2 div {
+  width: 100%;
+  height: 50%;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.container .box2 div label {
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.container .box2 div input {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: #e0e0e0;
+}
+.container .box2 div input:focus {
+  box-shadow: inset 5px 5px 10px 1px rgb(213, 209, 209);
+}
+.container .box3 {
+  width: 100%;
+  height: 70px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+}
+.container .box3 button {
+  width: 100%;
+  height: 50px;
+  text-transform: uppercase;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  transition: 0.4s;
+}
+.container .box3 button:active {
+  background-color: rgb(18, 28, 167);
+}
+
+.row {
+  width: 500px;
+  height: 150px;
+  box-shadow: -11px 11px 22px #bebebe, 11px -11px 22px #ffffff;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.row h3 {
+  margin-bottom: 10px;
+  font-size: 50px;
+  color: green;
+}/*# sourceMappingURL=style.css.map */
